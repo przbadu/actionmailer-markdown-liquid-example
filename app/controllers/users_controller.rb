@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  def send_email
+    UserMailer.welcome(user).deliver_now
+  end
+
   # GET /users
   def index
     @users = User.all
@@ -50,6 +54,7 @@ class UsersController < ApplicationController
     def set_user
       @user = User.find(params[:id])
     end
+    alias_method :user, :set_user
 
     # Only allow a trusted parameter "white list" through.
     def user_params
