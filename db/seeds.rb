@@ -3,5 +3,9 @@
   user.save
 end
 
+Category.create(name: 'Kitchen')
+c = Category.create(name: 'Electronics')
 
-User.first.posts.create!(name: 'First Post', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea expedita tempora dignissimos voluptatem assumenda voluptas quae sapiente laborum! Ea totam, harum iste nam est laudantium porro temporibus quibusdam non rem.')
+c.products.create(name: 'iPhone 7', price: '750')
+c.products.create(name: 'Samsung Galaxy s7', price: '750')
+c.products.create(name: 'iPad Air', price: '499')
