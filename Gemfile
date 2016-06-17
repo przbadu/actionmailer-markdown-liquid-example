@@ -7,6 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'actionmailer-markdown'
 gem 'liquid'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug'
