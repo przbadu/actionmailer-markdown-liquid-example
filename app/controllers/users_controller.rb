@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:send_email, :show, :edit, :update, :destroy]
 
   def send_email
     UserMailer.welcome(user).deliver_now
+    redirect_to root_path
   end
 
   # GET /users

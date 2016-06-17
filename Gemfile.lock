@@ -61,6 +61,7 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.4.1)
       launchy (~> 2.2)
+    liquid (3.0.6)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -140,6 +141,7 @@ DEPENDENCIES
   byebug
   jquery-rails
   letter_opener
+  liquid
   rails (= 4.2.5.2)
   sass-rails (~> 5.0)
   spring
