@@ -1,6 +1,15 @@
 en:
   user_mailer:
-    welcome:
+    activation_email:
       subject: Activate your account
       body: |
         Hello, %{name}!
+
+        %{blah} should not get parsed
+
+        You have to [activate your account](%{activation_url}).
+
+        Thanks,
+
+        --
+        Myapp team
