@@ -6,6 +6,11 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def welcome_email
+    UserMailer.welcome_email(user).deliver_now
+    redirect_to root_path
+  end
+
   # GET /users
   def index
     @users = User.all

@@ -16,7 +16,8 @@
       <tr>
         <td><%= user.email %></td>
         <td><%= user.name %></td>
-        <td><%= link_to 'Send email', send_email_user_path(user) %></td>
+        <td><%= link_to 'Confirmation email', send_email_user_path(user) %></td>
+        <td><%= link_to 'Welcome email', welcome_email_user_path(user) %></td>
       </tr>
     <% end %>
   </tbody>

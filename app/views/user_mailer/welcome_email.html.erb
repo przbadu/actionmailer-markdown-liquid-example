@@ -1,0 +1,1 @@
+<%=raw RedCloth.new(Liquid::Template.parse(@content).render('name' => @name, 'activation_url' => @activation_url)).to_html %>
