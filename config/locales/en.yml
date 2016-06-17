@@ -5,7 +5,7 @@ en:
       body: |
         Hello, %{name}!
 
-        %{blah} should not get parsed
+        without blah
 
         You have to [activate your account](%{activation_url}).
 
