@@ -10,7 +10,8 @@ gem 'bootstrap-sass'
 # Tools and helpers
 gem 'actionmailer-markdown'
 gem 'liquid'
-gem 'RedCloth'
+# gem 'RedCloth'
+gem 'redcarpet'
 
 group :development, :test do
   gem 'byebug'

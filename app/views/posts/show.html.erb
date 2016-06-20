@@ -12,7 +12,8 @@
 
 <p>
   <strong>Content:</strong>
-  <%=raw RedCloth.new(Liquid::Template.parse(@post.content).render('post' => @post)).to_html %>
+  <%#=raw RedCloth.new(Liquid::Template.parse(@post.content).render('post' => @post)).to_html %>
+  <%= markdown(@post.content, 'post' => @post) %>
 </p>
 
 <!-- let try parsing liquid -->
