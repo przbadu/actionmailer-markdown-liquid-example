@@ -79,6 +79,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    pg (0.18.4)
     pkg-config (1.1.7)
     postmark (1.5.0)
       json
@@ -159,6 +160,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   liquid
+  pg
   postmark-rails (~> 0.10.0)
   rails (= 4.2.5.2)
   rails_12factor
