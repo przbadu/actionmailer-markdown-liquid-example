@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to("Liquid Markdown", root_path, class: 'navbar-brand') %>
+    </div>
+
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <% if post = Post.first %>
+          <li><%= link_to("Update Post", edit_post_path(post)) %></li>
+          <li><%= link_to("View Post", post_path(post)) %></li>
+        <% else %>
+          <li><%= link_to("New Post", new_post_path) %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

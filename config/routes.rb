@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts do
+    collection do
+      get :example
+    end
+  end
   root 'users#index'
   resources :users do
     member do

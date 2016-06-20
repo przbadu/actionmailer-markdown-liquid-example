@@ -1,4 +1,6 @@
 class UserMailer < ApplicationMailer
+  add_template_helper(ApplicationHelper)
+
   def activation_email(user)
     @name = user.name
     @activation_url = user_url(user.id)
@@ -8,18 +10,7 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
     @name = user.name
     @activation_url = user_url(user.id)
-    @content = %(
-      <p>Hello, {{name}}!</p>
-
-        <p>This is welcome email<br/>
-
-        You have to <a href={{activation_url}}>{{activation_url}}</a>. <br/>
-
-        Thanks,<br/>
-
-        --<br/>
-        Freewheeler</p>
-    )
+    @content = Post.first.content
     mail to: user.email, subject: 'Welcome email'
   end
 end
