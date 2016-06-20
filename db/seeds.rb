@@ -3,7 +3,8 @@
 #   user.save
 # end
 
-user = User.find_or_initialize_by(email: 'test@example.com')
+user = User.find_or_initialize_by(email: 'gary@buzzware.com.au')
+user = User.find_or_initialize_by(email: 'dev1@buzzware.com.au')
 user.save
 
 c = Category.create(name: 'Electronics')
