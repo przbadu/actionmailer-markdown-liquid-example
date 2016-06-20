@@ -8,9 +8,9 @@ class UserMailer < ApplicationMailer
   end
 
   def welcome_email(user)
-    @name = user.name
-    @activation_url = user_url(user.id)
-    @content = Post.first.content
+    # @name = user.name
+    # @activation_url = user_url(user.id)
+    @post = Post.first
     mail to: user.email, subject: 'Welcome email'
   end
 end
