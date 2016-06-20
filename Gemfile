@@ -12,6 +12,7 @@ gem 'actionmailer-markdown'
 gem 'liquid'
 # gem 'RedCloth'
 gem 'redcarpet'
+gem 'postmark-rails', '~> 0.10.0'
 
 group :development, :test do
   gem 'byebug'
